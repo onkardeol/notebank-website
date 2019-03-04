@@ -35,19 +35,58 @@
           </nav>  
         
         
-        <div class="row" style="margin-left: auto; margin-right: auto; vertical-align: middle;">
-            <div class="col s8 offset-s2">
-                <div class="card hoverable">
-                    <u>
-                        <li>
-                            <input id="professor" type="text" class="validate">
-                            <label for="professor">Professor Name</label>
-                        </li>
+        <div class="row">
+            <div class="col card hoverable s6 offset-s3">
+              <form>
+                <div class="card-content">
+                  <span class="card-title">Upload Note</span>
+                  
+                  <div class="row">
+                    <div class="input-field col s12">
+                      <input type="text" class="validate" name="school" id="school" placeholder="Name of School"/>
+                    </div>
                     
-                    </u>
+                    <div class="input-field col s12">
+                      <input type="text" class="validate" name="Professor" id="professor" placeholder="Name of Professor"/>
+                    </div>
+
+                    <div class="input-field col s12">
+                      <input type="text" class="validate" name="course" id="course" placeholder="Course Code"/>
+                    </div>
+
+                    <div class="input-field col s12">
+                      <input type="text" class="validate" name="mark" id="mark" placeholder="Final Mark Received (Not required)"/>
+                    </div>
+
+                    <div class="input-field col s12">
+                      <input type="text" class="validate" name="timetaken" id="timetaken" placeholder="When did you take the course?"/>
+                    </div>
+
+                    <div class="file-field input-field col s12">
+                      <div class="btn">
+                        <span>Note</span>
+                        <input type="file">
+                      </div>
+                      <div class="file-path-wrapper">
+                        <input class="file-path validate" type="text" placeholder="Must be in PDF format!">
+                      </div>
+                    </div>
+                  </div>
                 </div>
+                
+
+                <div>
+                <div class="card-action right-align">
+                    <button class="btn waves-effect waves-light col s12" type="submit" name="action" style = "margin-bottom: 10px;">Upload Note</button>
+                </div>
+              </form>
+          
             </div>
+
         </div>
+            
+        </div>
+
         
     </body>
 
