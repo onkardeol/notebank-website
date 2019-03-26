@@ -1,24 +1,16 @@
 import React, { Component } from 'react';
 import './materialize/css/materialize.css';
-import Background from './images/background.jpg'
+import './css/loginpage.css';
 
 const cardPStyle = {
   marginLeft:'10px',
   display:'inline-block'
 }
 
-const backgroundImage = {
-  backgroundImage: "url(" + Background + ")",
-  backgroundPosition: 'center',
-  backgroundSize: 'cover',
-  backgroundRepeat: 'no-repeat',
-  minHeight: '100%'
-}
-
-class App extends Component {
+class LoginPage extends Component {
   render() {
     return (
-      <div className="App" style={backgroundImage}>
+      <div className="LoginPage">
 
         <div className="valign-wrapper row-landingpage login-box">
           <div className="col card hoverable s10 pull-s1 m6 pull-m3 l4 pull-l4">
@@ -52,4 +44,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default LoginPage;
