@@ -1,6 +1,16 @@
 import React, { Component } from 'react';
 import './materialize/css/materialize.css';
 import './css/loginpage.css';
+import {
+  Route,
+  NavLink,
+  HashRouter
+} from "react-router-dom";
+import HomePage from "./HomePage";
+import NotePage from "./NotePage";
+import ProfilePage from "./ProfilePage";
+import RegistrationPage from "./RegistrationPage";
+import UploadPage from "./UploadPage";
 
 const cardPStyle = {
   marginLeft:'10px',
