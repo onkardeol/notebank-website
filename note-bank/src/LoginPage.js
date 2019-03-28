@@ -43,7 +43,10 @@ class LoginPage extends Component {
                 <div>
                   <div className="card-action right-align">
                       <p className="margin medium-small" style={cardPStyle}><a href="#">Register</a></p>
-                      <button className="btn waves-effect waves-light" type="submit" name="action">Sign  In</button>
+                      <HashRouter>
+                        <NavLink tag ={HomePage} to="/HomePage"><button className="btn waves-effect waves-light" type="submit" name="action">Sign  In</button></NavLink>
+                        <Route path="/HomePage" component={HomePage}/>
+                      </HashRouter>
                   </div>
                 </div>
               </form>

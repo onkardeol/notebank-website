@@ -5,7 +5,7 @@ import LoginPage from './LoginPage';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
-    <LoginPage />, 
+    <LoginPage/>, 
     document.getElementById('root')
 );
 
