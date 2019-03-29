@@ -45,10 +45,8 @@ const LoginPage = () => {
 
                 <div>
                   <div className="card-action right-align">
-                      <BrowserRouter>
-                        <NavLink to="/RegistrationPage/"><p className="margin medium-small" style={cardPStyle}><a href="/RegistrationPage">Register</a></p></NavLink>
-                        <NavLink to="/HomePage/"><button className="btn waves-effect waves-light" type="submit" name="action">Sign  In</button></NavLink>
-                      </BrowserRouter>
+                      <NavLink to="/RegistrationPage/"><p className="margin medium-small" style={cardPStyle}><a href="/RegistrationPage">Register</a></p></NavLink>
+                      <NavLink to="/HomePage/"><button className="btn waves-effect waves-light" type="submit" name="action">Sign  In</button></NavLink>
                   </div>
                 </div>
               </form>

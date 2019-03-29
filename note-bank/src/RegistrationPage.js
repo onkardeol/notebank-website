@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './materialize/css/materialize.css';
-
+import {NavLink} from "react-router-dom";
 
 const RegistrationPage = () =>  {
         return(
@@ -49,8 +49,8 @@ const RegistrationPage = () =>  {
                                 </div>
                             </div>
                             <div className="card-action right-align">
-                                <button className="btn waves-effect waves-light amber accent-2" type="submit" name="action">Already a Member</button>
-                                <button className="btn waves-effect waves-light amber accent-2" type="submit" name="action">Sign Up</button>
+                                <NavLink to="/"><button className="btn waves-effect waves-light amber accent-2" type="submit" name="action">Already a Member</button></NavLink>
+                                <NavLink to="/HomePage/"><button className="btn waves-effect waves-light amber accent-2" type="submit" name="action">Sign Up</button></NavLink>
                             </div>
                         </form>
                     </div>
