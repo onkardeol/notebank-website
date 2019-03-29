@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import './materialize/css/materialize.css';
 
 
-class RegistrationPage extends Component {
-    render() {
+const RegistrationPage = () =>  {
         return(
             <div className ="RegistrationPage">
                 <nav className="white">
@@ -58,7 +57,6 @@ class RegistrationPage extends Component {
                 </div>
             </div>
         );
-    }
 }
 
 export default RegistrationPage;

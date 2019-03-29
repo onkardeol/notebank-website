@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import './materialize/css/materialize.css';
 
 
-class UploadPage extends Component {
-    render(){
+const UploadPage = () =>  {
         return(
             <div className = "UploadPage">
                 <nav class="white">
@@ -75,7 +74,6 @@ class UploadPage extends Component {
                 </div>
             </div>
         );
-    }
 }
 
 export default UploadPage;

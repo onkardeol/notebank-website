@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
+
 import './materialize/css/materialize.css';
 import './css/loginpage.css';
 import {
   Route,
   NavLink,
-  HashRouter
+  HashRouter,
+  Router,
+  Link,
+  BrowserRouter
 } from "react-router-dom";
 import HomePage from "./HomePage";
 import NotePage from "./NotePage";
@@ -17,8 +21,7 @@ const cardPStyle = {
   display:'inline-block'
 }
 
-class LoginPage extends Component {
-  render() {
+const LoginPage = () => {
     return (
       <div className="LoginPage">
 
@@ -42,11 +45,10 @@ class LoginPage extends Component {
 
                 <div>
                   <div className="card-action right-align">
-                      <p className="margin medium-small" style={cardPStyle}><a href="#">Register</a></p>
-                      <HashRouter>
-                        <NavLink tag ={HomePage} to="/HomePage"><button className="btn waves-effect waves-light" type="submit" name="action">Sign  In</button></NavLink>
-                        <Route path="/HomePage" component={HomePage}/>
-                      </HashRouter>
+                      <BrowserRouter>
+                        <NavLink to="/RegistrationPage/"><p className="margin medium-small" style={cardPStyle}><a href="/RegistrationPage">Register</a></p></NavLink>
+                        <NavLink to="/HomePage/"><button className="btn waves-effect waves-light" type="submit" name="action">Sign  In</button></NavLink>
+                      </BrowserRouter>
                   </div>
                 </div>
               </form>
@@ -54,7 +56,6 @@ class LoginPage extends Component {
           </div>
         </div>
     );
-  }
 }
 
 export default LoginPage;

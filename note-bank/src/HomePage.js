@@ -2,9 +2,7 @@ import React, { Component } from "react";
 import './materialize/css/materialize.css';
 
 
-class HomePage extends Component {
-
-    render() {
+const HomePage = () =>  {
         return (
             <div className="HomePage">
                 <nav className="white">
@@ -232,7 +230,11 @@ class HomePage extends Component {
             </div>
 
         );
+
+
+
+
+
     }
-}
 
 export default HomePage;

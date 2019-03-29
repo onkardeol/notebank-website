@@ -11,9 +11,7 @@ const pdfHolder = {
     paddingTop: '75px'
 }
 
-class NotePage extends Component {
-
-    render() {
+const NotePage = () =>  {
         return (
             <div className = "NotePage">
                 <nav className="white">
@@ -62,7 +60,6 @@ class NotePage extends Component {
                 </div>
             </div>
         );
-    }
 }
 
 export default NotePage;
