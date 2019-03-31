@@ -21,7 +21,8 @@ const cardPStyle = {
   display:'inline-block'
 }
 
-const LoginPage = () => {
+class LoginPage extends Component {
+  render() {
     return (
       <div className="LoginPage">
 
@@ -54,6 +55,7 @@ const LoginPage = () => {
           </div>
         </div>
     );
+  }
 }
 
 export default LoginPage;

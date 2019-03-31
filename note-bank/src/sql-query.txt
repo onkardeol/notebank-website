@@ -1,0 +1,37 @@
+CREATE TABLE Users (
+	UserID int NOT NULL,
+	Email varchar(100) NOT NULL,
+	Pass varchar(20) NOT NULL,
+	FirstName varchar(50) NOT NULL,
+	LastName varchar(50) NOT NULL,
+	Bio varchar(5000),
+	PRIMARY KEY (UserID,
+	FOREIGN KEY (CourseID) REFERENCES UserCourses(CourseID),
+	FOREIGN KEY (UniversityID) REFERENCES Universities(UniversityID)	
+);
+
+CREATE_TABLE UserCourses(
+	CourseID varchar(20) PRIMARY KEY,
+	FOREIGN KEY (CourseID) REFERENCES Courses(CourseID)
+	FOREIGN KEY (UserID) REFERENCES Users(UserID)
+);
+
+CREATE_TABLE Courses (
+	CourseID varchar(20),
+	CourseCode varchar(255),
+	CourseName varchar(255),
+	UniversityID int,
+	FOREIGN KEY (CourseID) REFERENCES Notes(CourseID)
+);
+
+CREATE_TABLE Universities (
+	UniversityID int,
+	UniversityName varchar(255),
+	FOREIGN KEY (ID) REFERENCES courses(UniversityID)
+);
+
+CREATE_TABLE Notes (
+	CourseID int,
+	FileName text(1000),
+	FileLink text(1000)
+);
