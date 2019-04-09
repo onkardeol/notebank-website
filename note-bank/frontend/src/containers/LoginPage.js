@@ -25,7 +25,18 @@ class LoginPage extends Component {
   render() {
     return (
       <div className="LoginPage">
-
+  <nav className="white">
+            <div className="nav-wrapper">
+                <a href="#" className="brand-logo amber-text text-lighten-2">NoteBank</a>   
+                <ul className="hide-on-med-and-down right">
+                    <li><NavLink to="/LoginPage/"><a href="/LoginPage" className="amber-text text-lighten-2">Login</a></NavLink></li>
+                    <li><NavLink to="/RegistrationPage/"><a href="/RegistrationPage" className="amber-text text-lighten-2">Register</a></NavLink></li>
+                    <li><NavLink to="/HomePage/"><a href="/HomePage" className="amber-text text-lighten-2">Home</a></NavLink></li>
+                    <li><NavLink to="/UploadPage/"><a href="/UploadPage" className="amber-text text-lighten-2">Upload</a></NavLink></li>
+                    <li><NavLink to="#"><a href="#" className="amber-text text-lighten-2">Settings</a></NavLink></li>
+                </ul>
+            </div>
+        </nav>
         <div className="valign-wrapper row-landingpage login-box">
           <div className="col card hoverable s10 pull-s1 m6 pull-m3 l4 pull-l4">
             <form>
