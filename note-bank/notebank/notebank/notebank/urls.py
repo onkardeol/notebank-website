@@ -20,6 +20,7 @@ from login import views as login_views
 from home import views as home_views
 from upload import views as upload_views
 from signup import views as signup_views
+from notepage import views as notepage_views
 from django.conf.urls import url
 
 urlpatterns = [
@@ -31,5 +32,6 @@ urlpatterns = [
     path('upload/', upload_views.upload),
     path('signup/', signup_views.signup),
     url(r'^signup/$', signup_views.signup, name='signup'),
+    path('notepage/', notepage_views.notepage)
     #path('home/', home_views.)
 ]

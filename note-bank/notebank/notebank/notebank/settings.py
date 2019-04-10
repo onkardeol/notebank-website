@@ -43,7 +43,8 @@ INSTALLED_APPS = [
     'upload',
     'signup',
     'courses',
-    'notes'
+    'notes',
+    'notepage'
 ]
 
 MIDDLEWARE = [
