@@ -22,6 +22,10 @@
                   <span class="card-title">Sign Up</span>
                   <div class="row">
                     <div class="input-field col s12">
+                      <input type="text" class="validate" name="username" id="id_username" placeholder="Username"/>
+                    </div>
+
+                    <div class="input-field col s12">
                       <input type="email" class="validate" name="email" id="id_email" placeholder="Email address"/>
                     </div>
       
@@ -30,7 +34,7 @@
                     </div>
       
                     <div class="input-field col s6">
-                        <input type="text" class="validate" name="firstname" id="id_lastname" placeholder="Last name"/>
+                        <input type="text" class="validate" name="lastname" id="id_lastname" placeholder="Last name"/>
                     </div>
       
                     <div class="input-field col s12">
@@ -40,10 +44,17 @@
                     <div class="input-field col s12">
                         <input type="text" class="validate" name="passconfirm" id="id_passconfirm" placeholder="Confirm password"/>
                     </div>
-                  </div>
+
+                    <label>Choose your university.</label>
+                  <select class="browser-default">
+                    <option value="" disabled selected>Choose your option</option>
+                    {% for uni in universities %}
+                      <option value="{{uni.id}}">{{uni.name}}</option>
+                    {% endfor %}
+                  </select>
                 </div>
                 <div class="card-action right-align">
-                  <button class="btn waves-effect waves-light amber accent-2" type="submit" name="action">Already a Member</button>
+                    <p class="margin medium-small" style="margin-left:10px;display:inline-block;"><a href="/login/">Already a Member</a></p>
                   <button class="btn waves-effect waves-light amber accent-2" type="submit" name="action">Sign Up</button>
                 </div>
               </form>

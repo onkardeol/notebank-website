@@ -41,7 +41,9 @@ INSTALLED_APPS = [
     'university',
     'home',
     'upload',
-    'signup'
+    'signup',
+    'courses',
+    'notes'
 ]
 
 MIDDLEWARE = [
