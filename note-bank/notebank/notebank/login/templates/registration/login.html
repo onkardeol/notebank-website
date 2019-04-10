@@ -1,54 +1,60 @@
 <!DOCTYPE html>
 
 <html>
-  <head>
-    {% load static %}
-    <link rel="stylesheet" href="{% static 'materialize/css/materialize.css' %}">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <title>NoteBank - Landing Page</title>
-  </head>
+    <head>
+        {% load static %}
+        <link rel="stylesheet" href={% static "materialize/css/materialize.css" %}>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	    <title>NoteBank - Landing Page</title>
+    </head>
 
-  <body style="background-image:url('{% static 'images/background.jpg' %}');background-repeat:no-repeat;background-size:100%">
- 
-    <nav className="white">
-      <div className="nav-wrapper">
-        <a href="#" className="brand-logo amber-text text-lighten-2">NoteBank</a>   
-        <ul className="hide-on-med-and-down right">
-          <li><NavLink to="/LoginPage/"><a href="/LoginPage" className="amber-text text-lighten-2">Login</a></NavLink></li>
-          <li><NavLink to="/RegistrationPage/"><a href="/RegistrationPage" className="amber-text text-lighten-2">Register</a></NavLink></li>
-          <li><NavLink to="/HomePage/"><a href="/HomePage" className="amber-text text-lighten-2">Home</a></NavLink></li>
-          <li><NavLink to="/UploadPage/"><a href="/UploadPage" className="amber-text text-lighten-2">Upload</a></NavLink></li>
-          <li><NavLink to="#"><a href="#" className="amber-text text-lighten-2">Settings</a></NavLink></li>
-        </ul>
+    <body style="background-image:url('{% static 'images/background.jpg' %}');background-repeat:no-repeat;background-size:100%">
+      <nav class="white">
+        <div class="nav-wrapper">
+          <a href="#" class="brand-logo amber-text text-lighten-2">NoteBank</a>   
+            <ul class="hide-on-med-and-down right">               
+                <li>    
+                   <div class="center row">
+                      <div class="col s12 " >
+                        <div class="row" id="topbarsearch">
+                          <div class="input-field col s6 s12 amber-text text-lighten-2">
+                          </div>
+                         </div>
+                       </div>
+                     </div>          
+                 </li>                     
+           </ul>
       </div>
-    </nav>
+    </nav> 
 
-    <div className="valign-wrapper row-landingpage login-box">
-      <div className="col card hoverable s10 pull-s1 m6 pull-m3 l4 pull-l4">
-        <form>
-          <div className="card-content">
-            <span className="card-title">Enter credentials</span>
-            
-            <div className="row">
-              <div className="input-field col s12">
-                <input type="email" className="validate" name="email" id="email" placeholder="Email address"/>
-              </div>
-              
-              <div className="input-field col s12">
-                <input type="password" className="validate" name="password" id="password" placeholder="Password"/>
-              </div>
+        <div class="valign-wrapper row-landingpage login-box">
+            <div class="col card hoverable s10 pull-s1 m6 pull-m3 l4 pull-l4">
+              <form method = "post">
+                {% csrf_token %}
+                <div class="card-content">
+                  <span class="card-title">Enter credentials</span>
+                  
+                  <div class="row">
+                    <div class="input-field col s12">
+                      <input type="text" class="validate" name = "username" required id="id_username" placeholder="User Name"/>
+                    </div>
+                    
+                    <div class="input-field col s12">
+                      <input type="password" class="validate" name = "password" required id="id_password" placeholder="Password"/>
+                    </div>
+                  </div>
+                </div>
+                
+
+                <div>
+                <div class="card-action right-align">
+                    <p class="margin medium-small" style="margin-left:10px;display:inline-block;"><a href="#">Register</a></p>
+                    <button class="btn waves-effect waves-light" type="submit" name="action">Sign In</button>
+                </div>
+              </form>
+          
             </div>
           </div>
-          
 
-            <div>
-              <div className="card-action right-align">
-                  <p className="margin medium-small" style={cardPStyle}><a href="/RegistrationPage">Register</a></p>
-                  <button className="btn waves-effect waves-light" type="submit" name="action">Sign  In</button>
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>
-  </body>
+    </body>
 </html>
