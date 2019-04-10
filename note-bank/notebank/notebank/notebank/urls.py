@@ -18,10 +18,18 @@ from django.urls import path
 from django.contrib.auth import views as auth_views
 from login import views as login_views
 from home import views as home_views
+from upload import views as upload_views
+from signup import views as signup_views
+from django.conf.urls import url
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', auth_views.LoginView.as_view()),
-    path('logout/', auth_views.LogoutView.as_view())
+    path('', login_views.redirect),
+    path('login/', login_views.login),
+    path('logout/', auth_views.LogoutView.as_view()),
+    path('home/', home_views.home),
+    path('upload/', upload_views.upload),
+    path('signup/', signup_views.signup),
+    url(r'^signup/$', signup_views.signup, name='signup'),
     #path('home/', home_views.)
 ]

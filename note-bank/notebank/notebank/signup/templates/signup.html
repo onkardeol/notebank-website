@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'materialize/css/materialize.css' %}">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>NoteBank - Registration Page</title>
+  </head>
+
+  <body style="background-image:url('{% static 'images/background.jpg' %}');background-repeat:no-repeat;background-size:100%">
+    <nav class="white">
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo amber-text text-lighten-2">NoteBank</a>   
+    </div>
+  </nav> 
+    <div class="valign-wrapper row-registrationpage login-box">
+      <div class="col card hoverable s10 pull-s1 m6 pull-m3 l4 pull-l4" style="width:600px;">
+            {% block content %}
+            <span class="card-title">Sign Up</span>
+            <form method="post">
+                {% csrf_token %}
+                {% for field in form %}
+                    <p>
+                    {{ field.label_tag }}<br>
+                    {{ field }}
+                    </p>
+                {% endfor %}
+                <div class="card-action right-align">
+                <button class="btn waves-effect waves-light amber accent-2" type="submit" name="action">Already a Member</button>
+                <button class="btn waves-effect waves-light amber accent-2" type="submit" name="action">Sign Up</button>
+                </div>
+            </form>
+          {% endblock %}
+      </div>
+    </div>
+  </body>
+</html>
+
