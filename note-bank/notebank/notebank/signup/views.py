@@ -2,6 +2,8 @@ from django.contrib.auth import login, authenticate
 from django.shortcuts import render, redirect
 
 from signup.forms import SignUpForm
+from university.models import University
+
 
 def signup(request):
     if request.method == 'POST':
@@ -16,3 +18,8 @@ def signup(request):
     else:
         form = SignUpForm()
     return render(request, 'signup.html', {'form': form})
+
+def retrieveUniversities():
+    universities = University.objects.all()
+
+    return universities
