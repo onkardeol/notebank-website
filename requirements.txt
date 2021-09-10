@@ -8,7 +8,7 @@ pipenv==2018.11.26
 psycopg2-binary==2.8.6
 python-decouple==3.3
 pytz==2020.1
-sqlparse==0.4.1
+sqlparse==0.4.2
 virtualenv==16.4.3
 virtualenv-clone==0.5.3
 whitenoise==5.2.0
